@@ -33,5 +33,6 @@ public class Consumer {
         Car C = new Car("C");
        consumer.parking(A);
        consumer.parking(B);
+       consumer.parking(B);
     }
 }
