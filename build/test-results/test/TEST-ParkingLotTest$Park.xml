@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParkingLotTest$Park" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-03T09:22:47" hostname="varsha" time="0.011">
-  <properties/>
-  <testcase name="givenVehicleToParkingLot_WhenPark_ThenParked()" classname="ParkingLotTest$Park" time="0.009"/>
-  <testcase name="givenVehicleToParkingLot_WhenPark_ThenAvailable()" classname="ParkingLotTest$Park" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

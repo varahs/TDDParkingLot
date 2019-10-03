@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+public class DuplicateException extends  Exception {
+    public DuplicateException() {
+    }
 
-public class DuplicateException {
+    public DuplicateException(String s) {
+        super(s);
+    }
 }

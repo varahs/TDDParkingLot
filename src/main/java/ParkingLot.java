@@ -11,11 +11,22 @@ public class ParkingLot {
         this.capacity = capacity;
     }
 
-    public boolean park(Vehicle vehicle) {
-        if (this.parkArea.size() < capacity)
-            return this.parkArea.add(vehicle);
+    public boolean park(Object obj) throws DuplicateException, ParkingFullException {
+        if (isParkingLotEmpty()) {
+            if (!isDuplicate(obj)) {
+                return this.parkArea.add(obj);
+            }
+            throw new DuplicateException("Parking Duplicate");
+        }
+        throw new ParkingFullException("ParkingLot Full");
+    }
 
-        return false;
+    private boolean isParkingLotEmpty() {
+        return this.parkArea.size() < capacity;
+    }
+
+    private boolean isDuplicate(Object obj) {
+        return this.parkArea.contains(obj);
     }
 
 }
