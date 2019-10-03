@@ -29,4 +29,10 @@ public class ParkingLot {
         return this.parkArea.contains(obj);
     }
 
+    public boolean unPark(Object object1) throws NotAvailableEception {
+        if(!isDuplicate(object1))
+            throw new NotAvailableEception("Doesn't Exists");
+
+           return parkArea.remove(object1);
+    }
 }

@@ -17,7 +17,7 @@ public class Consumer {
             System.out.println("Car "+car.toString()+" can't be added to Personal parkinglot");
             try {
                 this.guestParkingLot.park(car.toString());
-                System.out.println("Car "+car.toString()+" added to Guest parking ot");
+                System.out.println("Car "+car.toString()+" added to Guest parkinglot");
             } catch (DuplicateException ex) {
                 System.out.println("Car "+car.toString()+" is a duplicate in Guest parkinglot");
             } catch (ParkingFullException ex) {
@@ -31,8 +31,10 @@ public class Consumer {
         Car A = new Car("A");
         Car B = new Car("B");
         Car C = new Car("C");
-       consumer.parking(A);
+       consumer.parking(C);
        consumer.parking(B);
        consumer.parking(B);
+       consumer.parking(B);
+       consumer.parking(C);
     }
 }

@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
     @Nested
     static class Park{
         @Test
-        void givenVehicleToParkingLot_WhenPark_ThenParked() throws ParkingLotException {
+        void givenVehicleToParkingLot_WhenPark_ThenParked() throws DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(50);
             assertTrue(parkingLot.park(new Object()));
         }
 
         @Test
-        void givenVehiclesToParkingLot_WhenPark_ThenNotAvailable() throws ParkingLotException {
+        void givenVehiclesToParkingLot_WhenPark_ThenNotAvailable() throws  DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(1);
             parkingLot.park(new Object());
             Throwable exception = assertThrows(ParkingFullException.class, () -> parkingLot.park(new Object()));
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException() throws ParkingLotException {
+        void givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException() throws  DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(2);
             Object object1 = new Object();
             parkingLot.park(object1);
@@ -32,48 +32,25 @@ import static org.junit.jupiter.api.Assertions.*;
             assertEquals("Parking Duplicate", exception.getMessage());
         }
 
+        @Test
+        void givenVehicleToParkingLot_WhenUnPark_ThenShouldUnPark() throws NotAvailableEception, DuplicateException, ParkingFullException {
+            ParkingLot parkingLot = new ParkingLot(2);
+            Object object1 = new Object();
+            Object object2 = new Object();
+            parkingLot.park(object1);
+            parkingLot.park(object2);
+            assertEquals(true, parkingLot.unPark(object1));
+        }
+ @Test
+        void givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark() throws NotAvailableEception, DuplicateException, ParkingFullException {
+            ParkingLot parkingLot = new ParkingLot(2);
+            Object object1 = new Object();
+            Object object2 = new Object();
+            parkingLot.park(object1);
+            parkingLot.park(object2);
+            Throwable exceptin=assertThrows(NotAvailableEception.class,()->parkingLot.unPark(new Object()));
+            assertEquals("Doesn't Exists",exceptin.getMessage());
+        }
+
     }
-
-//    @Nested
-//    static class Sanjay {
-//        Consumer consumer;
-//
-//        @Test
-//        void givenSameCarToParkingLot1_whenPark_SouldThrowException() throws ParkingLotException {
-//            ParkingLot parkingLot1 = new ParkingLot(2);
-//            ParkingLot parkingLot2 = new ParkingLot(3);
-//            Car car = new Car();
-//            consumer = new Consumer(parkingLot1, parkingLot2);
-//            consumer.personalParking(car);
-//            Throwable exception = assertThrows(ParkingLotException.class, () -> consumer.personalParking(car));
-//            assertEquals("Parking Duplicate", exception.getMessage());
-//        }
-//
-//        @Test
-//        void givenToThreeCars_whenPark_returnsException() throws ParkingLotException {
-//            ParkingLot parkingLot1 = new ParkingLot(2);
-//            ParkingLot parkingLot2 = new ParkingLot(3);
-//            Car A = new Car();
-//            Car B = new Car();
-//            Car C = new Car();
-//
-//            consumer = new Consumer(parkingLot1, parkingLot2);
-//            consumer.personalParking(A);
-//            consumer.personalParking(B);
-//            Throwable exception = assertThrows(ParkingLotException.class, () -> consumer.personalParking(C));
-//            assertEquals("ParkingLot Full", exception.getMessage());
-//        }
-//
-//        @Test
-//        void givenToTwoCars_whenPark_returnsTrue() throws ParkingLotException {
-//            ParkingLot parkingLot1 = new ParkingLot(2);
-//            ParkingLot parkingLot2 = new ParkingLot(3);
-//            Car A = new Car();
-//            Car B = new Car();
-//            consumer = new Consumer(parkingLot1, parkingLot2);
-//            assertTrue(consumer.personalParking(A));
-//            assertTrue(consumer.personalParking(B));
-//        }
-//    }
-
 }
