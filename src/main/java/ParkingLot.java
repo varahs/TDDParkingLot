@@ -1,18 +1,21 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class ParkingLot {
 
- private int[] parkArea= new int[20];
+    private List parkArea ;
+   private int capacity ;
 
-    public  boolean park(){
-        this.parkArea[0]=1;
-        return true;
+    public ParkingLot(int capacity) {
+        this.parkArea= new ArrayList();
+        this.capacity = capacity;
+    }
 
+    public boolean park(Vehicle vehicle) {
+        if (this.parkArea.size() < capacity)
+            return this.parkArea.add(vehicle);
+
+        return false;
     }
-    public int ParkSize(){
-        return 20-this.parkArea.length;
-    }
+
 }
