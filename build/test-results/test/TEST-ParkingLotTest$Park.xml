@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParkingLotTest$Park" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-10-03T18:22:50" hostname="varsha" time="0.013">
+<testsuite name="ParkingLotTest$Park" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-10-03T18:30:34" hostname="varsha" time="0.013">
   <properties/>
   <testcase name="givenVehiclesToParkingLot_WhenPark_ThenNotAvailable()" classname="ParkingLotTest$Park" time="0.008"/>
   <testcase name="givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException()" classname="ParkingLotTest$Park" time="0.001"/>
   <testcase name="givenVehicleToParkingLot_WhenPark_ThenParked()" classname="ParkingLotTest$Park" time="0.001"/>
-  <testcase name="givenVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.0"/>
+  <testcase name="givenVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.001"/>
   <testcase name="givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
