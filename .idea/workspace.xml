@@ -16,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Consumer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest$Park.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest$Park.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ParkingLotTest$Park.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/ParkingLotTest$Park.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
@@ -184,6 +185,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570086741585</updated>
     </task>
+    <task id="LOCAL-00001" summary="[varsha] Refactor. when unpark should return unparked Object">
+      <created>1570160777032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570160777032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,5 +207,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[varsha] Refactor. when unpark should return unparked Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="[varsha] Refactor. when unpark should return unparked Object" />
   </component>
 </project>

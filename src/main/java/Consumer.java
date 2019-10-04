@@ -28,6 +28,8 @@ public class Consumer {
     }
 
     public void unPark(Car car) {
+
+
         try {
             this.personalParkingLot.unPark(car);
             System.out.println("Unparking Car " + car.toString() + " in Personal Parkinglot");

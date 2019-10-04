@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
- class ParkingLotTest {
+class ParkingLotTest {
 
 
     @Nested
-    static class Park{
+    class Park {
         @Test
         void givenVehicleToParkingLot_WhenPark_ThenParked() throws DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(50);
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void givenVehiclesToParkingLot_WhenPark_ThenNotAvailable() throws  DuplicateException, ParkingFullException {
+        void givenVehiclesToParkingLot_WhenPark_ThenNotAvailable() throws DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(1);
             parkingLot.park(new Object());
             Throwable exception = assertThrows(ParkingFullException.class, () -> parkingLot.park(new Object()));
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException() throws  DuplicateException, ParkingFullException {
+        void givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException() throws DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(2);
             Object object1 = new Object();
             parkingLot.park(object1);
@@ -41,15 +41,32 @@ import static org.junit.jupiter.api.Assertions.*;
             parkingLot.park(object2);
             assertEquals(object1, parkingLot.unPark(object1));
         }
- @Test
-        void givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark() throws NotAvailableEception, DuplicateException, ParkingFullException {
+
+        @Test
+        void givenVehicleToUnPark_WhenUnPark_ThenShouldUnPark() {
+            ParkingLot parkingLot = new ParkingLot(2);
+            assertThrows(NotAvailableEception.class, () -> parkingLot.unPark(new Object()));
+        }
+
+        @Test
+        void givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark() throws DuplicateException, ParkingFullException {
             ParkingLot parkingLot = new ParkingLot(2);
             Object object1 = new Object();
             Object object2 = new Object();
             parkingLot.park(object1);
             parkingLot.park(object2);
-            Throwable exceptin=assertThrows(NotAvailableEception.class,()->parkingLot.unPark(new Object()));
-            assertEquals("Doesn't Exists",exceptin.getMessage());
+            Throwable exception = assertThrows(NotAvailableEception.class, () -> parkingLot.unPark(new Object()));
+            assertEquals("Doesn't Exists", exception.getMessage());
+        }
+ @Test
+        void givenVehicleToPark_WhenUnParkSameVehicle_ThenShouldUnPark() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            ParkingLot parkingLot = new ParkingLot(2);
+            Object object1 = new Object();
+            Object object2 = new Object();
+            parkingLot.park(object1);
+            parkingLot.park(object2);
+            parkingLot.unPark(object1);
+            assertEquals(true,parkingLot.park(object1));
         }
 
     }
