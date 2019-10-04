@@ -39,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.*;
             Object object2 = new Object();
             parkingLot.park(object1);
             parkingLot.park(object2);
-            assertEquals(true, parkingLot.unPark(object1));
+            assertEquals(object1, parkingLot.unPark(object1));
         }
  @Test
         void givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark() throws NotAvailableEception, DuplicateException, ParkingFullException {
