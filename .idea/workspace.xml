@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f05a0d68-69a4-40e3-a038-4559a5ab6b15" name="Default Changelist" comment="[varsha] add. Notify Owner when parking lot full">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Owner.java" afterDir="false" />
+    <list default="true" id="f05a0d68-69a4-40e3-a038-4559a5ab6b15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Iobserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Isubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SecurityGuard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -16,13 +16,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DuplicateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DuplicateException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/NotAvailableEception.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/NotAvailableEception.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ParkingFullException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ParkingFullException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DuplicateException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/NotAvailableEception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ParkingFullException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ParkingLot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ParkingLotException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest$Park.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest$Park.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/ParkingLotTest$Park.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/ParkingLotTest$Park.html" afterDir="false" />
@@ -30,13 +28,12 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-ParkingLotTest$Park.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-ParkingLotTest$Park.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DuplicateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DuplicateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NotAvailableEception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NotAvailableEception.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingFullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParkingFullException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DuplicateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/DuplicateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NotAvailableEception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/NotAvailableEception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingFullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/ParkingFullException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingLotException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +41,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="235" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -53,6 +53,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -65,6 +68,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -76,6 +80,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
@@ -95,20 +100,73 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Park.givenVehiclesToParkingLot_WhenPark_ThenNotAvailable">
-    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Consumer" />
-      <module name="untitled1.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OwnerTest.givenNotifyOwnerWhenParkingLotFulCount_WhenPark_ThenShouldCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ObserverTest.givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify">
+    <configuration name="Guard.givenNotifyGuardWhenParkingLotFull_whenPark_ThenShouldInform" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$OwnerTest.givenNotifyOwnerWhenParkingLotFulCount_WhenPark_ThenShouldCount&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$Guard.givenNotifyGuardWhenParkingLotFull_whenPark_ThenShouldInform&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ObserverTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$ObserverTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ObserverTest.givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$ObserverTest.givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ObserverTest.givenSubscribers_WhenParkingLotFull_ThenNotify" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$ObserverTest.givenSubscribers_WhenParkingLotFull_ThenNotify&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -143,53 +201,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OwnerTest.givenParkingLotFulInformAfterFirstUnParkInform_WhenParkAndUnPark_ThenShouldCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$OwnerTest.givenParkingLotFulInformAfterFirstUnParkInform_WhenParkAndUnPark_ThenShouldCount&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Park.givenVehiclesToParkingLot_WhenPark_ThenNotAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ParkingLotTest$Park.givenVehiclesToParkingLot_WhenPark_ThenNotAvailable&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Park.givenVehiclesToParkingLot_WhenPark_ThenNotAvailable" />
-        <item itemvalue="Gradle.OwnerTest.givenParkingLotFulInformAfterFirstUnParkInform_WhenParkAndUnPark_ThenShouldCount" />
-        <item itemvalue="Gradle.OwnerTest.givenNotifyOwnerWhenParkingLotFulCount_WhenPark_ThenShouldCount" />
+        <item itemvalue="Gradle.ObserverTest.givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify" />
+        <item itemvalue="Gradle.ObserverTest" />
+        <item itemvalue="Gradle.ObserverTest.givenSubscribers_WhenParkingLotFull_ThenNotify" />
         <item itemvalue="Gradle.OwnerTest.givenNotifyOwnerWhenParkingLotFull_WhenPark_ThenShouldNotify" />
-        <item itemvalue="Application.Consumer" />
+        <item itemvalue="Gradle.Guard.givenNotifyGuardWhenParkingLotFull_whenPark_ThenShouldInform" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570163349762</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[varsha] add. Notify Owner After parking lot full and First Unpark">
+      <created>1570251645483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570251645483</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +263,10 @@
     <MESSAGE value="[varsha] Refactor. when unpark should return unparked Object" />
     <MESSAGE value="[varsha] Refactor.After unpark should be able to park same vehicle" />
     <MESSAGE value="[varsha] add. Notify Owner when parking lot full" />
-    <option name="LAST_COMMIT_MESSAGE" value="[varsha] add. Notify Owner when parking lot full" />
+    <MESSAGE value="[varsha] add. Notify Owner After parking lot full and First Unpark" />
+    <option name="LAST_COMMIT_MESSAGE" value="[varsha] add. Notify Owner After parking lot full and First Unpark" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled1$ObserverTest_givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify.ic" NAME="ObserverTest.givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify Coverage Results" MODIFIED="1570277481909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

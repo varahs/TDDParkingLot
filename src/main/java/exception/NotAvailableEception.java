@@ -1,5 +1,7 @@
+package exception;
+
 public class NotAvailableEception extends Exception {
 
-    NotAvailableEception() {
+    public NotAvailableEception() {
     }
 }

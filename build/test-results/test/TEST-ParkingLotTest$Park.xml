@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParkingLotTest$Park" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-05T04:58:52" hostname="varsha" time="0.016">
+<testsuite name="ParkingLotTest$Park" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-05T13:36:19" hostname="varsha" time="0.008">
   <properties/>
-  <testcase name="givenVehiclesToParkingLot_WhenPark_ThenNotAvailable()" classname="ParkingLotTest$Park" time="0.009"/>
+  <testcase name="givenVehiclesToParkingLot_WhenPark_ThenNotAvailable()" classname="ParkingLotTest$Park" time="0.002"/>
   <testcase name="givenVehicleToParkingLotWhichIsFull_WhenPark_ThenThrowException()" classname="ParkingLotTest$Park" time="0.001"/>
   <testcase name="givenVehicleToPark_WhenUnParkSameVehicle_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.001"/>
-  <testcase name="givenVehicleToParkingLot_WhenPark_ThenParked()" classname="ParkingLotTest$Park" time="0.001"/>
-  <testcase name="givenVehicleToUnPark_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.001"/>
-  <testcase name="givenVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.001"/>
+  <testcase name="givenVehicleToParkingLot_WhenPark_ThenParked()" classname="ParkingLotTest$Park" time="0.0"/>
+  <testcase name="givenVehicleToUnPark_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.0"/>
+  <testcase name="givenVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.0"/>
   <testcase name="givenDifferentVehicleToParkingLot_WhenUnPark_ThenShouldUnPark()" classname="ParkingLotTest$Park" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

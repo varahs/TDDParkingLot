@@ -1,5 +1,7 @@
+package exception;
+
 public class DuplicateException extends  Exception {
-    DuplicateException() {
+    public DuplicateException() {
     }
 
 }

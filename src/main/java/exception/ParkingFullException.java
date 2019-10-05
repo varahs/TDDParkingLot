@@ -1,4 +1,6 @@
+package exception;
+
 public class ParkingFullException extends Exception {
-       ParkingFullException() {
+       public ParkingFullException() {
     }
 }

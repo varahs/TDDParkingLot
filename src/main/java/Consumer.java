@@ -1,3 +1,8 @@
+import exception.DuplicateException;
+import exception.NotAvailableEception;
+import exception.ParkingFullException;
+
+
 public class Consumer {
 
     private ParkingLot personalParkingLot;
@@ -48,7 +53,8 @@ public class Consumer {
 
 
     public static void main(String[] args) {
-        Consumer consumer = new Consumer(new ParkingLot(2,new Owner()), new ParkingLot(3,new Owner()));
+
+        Consumer consumer = new Consumer(new ParkingLot(2), new ParkingLot(3));
         Car A = new Car("A");
         Car B = new Car("B");
         Car C = new Car("C");

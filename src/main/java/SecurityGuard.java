@@ -1,5 +1,4 @@
-public class Owner implements Iobserver {
-
+public class SecurityGuard implements Iobserver {
     private int numberOfTimesFullInformed;
     private int numberOfTimesEmptyInformed;
     private boolean isFull;
@@ -7,10 +6,10 @@ public class Owner implements Iobserver {
 
     @Override
     public void update() {
-        this.isFull = isubject.getUpdate(this);
-        if(this.isFull)
+        isFull = isubject.getUpdate(this);
+        if(isFull)
             fullInform();
-        if(!this.isFull)
+        if(!isFull)
             emptyInform();
     }
 
@@ -19,7 +18,7 @@ public class Owner implements Iobserver {
         this.isubject = subject;
     }
 
-       public void fullInform() {
+    public void fullInform() {
         this.numberOfTimesFullInformed += 1;
     }
 
