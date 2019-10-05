@@ -1,14 +1,14 @@
 public class Consumer {
 
-    ParkingLot personalParkingLot;
-    ParkingLot guestParkingLot;
+    private ParkingLot personalParkingLot;
+    private ParkingLot guestParkingLot;
 
-    public Consumer(ParkingLot parkingLot1, ParkingLot parkingLot2) {
+    private Consumer(ParkingLot parkingLot1, ParkingLot parkingLot2) {
         this.personalParkingLot = parkingLot1;
         this.guestParkingLot = parkingLot2;
     }
 
-    public void parking(Car car) {
+    private void parking(Car car) {
         try {
             this.personalParkingLot.park(car);
             System.out.println("Parking Car " + car.toString() + " added to Personal parkinglot");
@@ -27,7 +27,7 @@ public class Consumer {
         }
     }
 
-    public void unPark(Car car) {
+    private void unPark(Car car) {
 
 
         try {
@@ -45,8 +45,10 @@ public class Consumer {
 
     }
 
+
+
     public static void main(String[] args) {
-        Consumer consumer = new Consumer(new ParkingLot(2), new ParkingLot(3));
+        Consumer consumer = new Consumer(new ParkingLot(2,new Owner()), new ParkingLot(3,new Owner()));
         Car A = new Car("A");
         Car B = new Car("B");
         Car C = new Car("C");

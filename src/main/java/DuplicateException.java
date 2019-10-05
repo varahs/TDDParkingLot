@@ -1,8 +1,5 @@
 public class DuplicateException extends  Exception {
-    public DuplicateException() {
+    DuplicateException() {
     }
 
-    public DuplicateException(String s) {
-        super(s);
-    }
 }

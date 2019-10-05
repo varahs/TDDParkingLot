@@ -1,5 +1,5 @@
 public class Car {
-    String type;
+    private String type;
 
     @Override
     public String toString() {
