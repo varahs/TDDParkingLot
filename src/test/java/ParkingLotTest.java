@@ -299,6 +299,28 @@ class ParkingLotTest {
         }
 
         @Test
+        void givenNullSubscribers_WhenParkingLotFull_ThenNoNotify() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            MockSecurityGuard guard = new MockSecurityGuard();
+            ParkingLot parkingLot = new ParkingLot(1);
+            parkingLot.subscribe(null);
+            parkingLot.park(new Object());
+            parkingLot.unPark(null);
+            parkingLot.unSubscribe(null);
+            assertEquals(0, guard.numberOfTimesFullInformed);
+            assertEquals(0, guard.numberOfTimesEmptyInformed);
+        }
+
+
+        @Test
+        void givenNoSubscribers_WhenParkingLotFull_ThenNoNotify() throws DuplicateException, ParkingFullException {
+            MockSecurityGuard guard = new MockSecurityGuard();
+            MockOwner owner = new MockOwner();
+            ParkingLot parkingLot = new ParkingLot(1);
+            parkingLot.park(new Object());
+            assertEquals(0, guard.numberOfTimesFullInformed);
+            assertEquals(0, owner.numberOfTimesFullInformed);
+        }
+        @Test
         void givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify() throws DuplicateException, ParkingFullException, NotAvailableEception {
             MockSecurityGuard guard = new MockSecurityGuard();
             MockOwner owner = new MockOwner();

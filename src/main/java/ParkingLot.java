@@ -30,25 +30,27 @@ public class ParkingLot implements Isubject {
 
 
     public void park(Object obj) throws DuplicateException, ParkingFullException {
-        if (isParkingLotEmpty())
-            throw new ParkingFullException();
 
-        if (!isDuplicate(obj))
-            throw new DuplicateException();
+            if (isParkingLotEmpty())
+                throw new ParkingFullException();
 
-        this.parkArea.put(obj, obj);
+            if (obj!=null&&!isDuplicate(obj))
+                throw new DuplicateException();
 
-        if (isParkingLotEmpty() && this.people != null) {
-            notifyFull = true;
+            this.parkArea.put(obj, obj);
 
-            notifySubscribers();
-        }
+            if (isParkingLotEmpty() && this.people != null) {
+                notifyFull = true;
+
+                notifySubscribers();
+            }
+
 
     }
 
 
     public Object unPark(Object object1) throws NotAvailableEception {
-        if (isDuplicate(object1))
+        if (object1!=null&&isDuplicate(object1))
             throw new NotAvailableEception();
         if (parkArea.size() == capacity) {
 
@@ -61,12 +63,14 @@ public class ParkingLot implements Isubject {
 
     @Override
     public void subscribe(Iobserver obj) {
-        this.people.add(obj);
+        if (obj != null)
+            this.people.add(obj);
     }
 
     @Override
     public void unSubscribe(Iobserver obj) {
-        this.people.remove(obj);
+        if (obj != null)
+            this.people.remove(obj);
     }
 
     @Override

@@ -19,10 +19,10 @@ public class SecurityGuard implements Iobserver {
     }
 
     public void fullInform() {
-        this.numberOfTimesFullInformed += 1;
+        this.numberOfTimesFullInformed =this.numberOfTimesFullInformed+ 1;
     }
 
     public void emptyInform() {
-        this.numberOfTimesEmptyInformed += 1;
+        this.numberOfTimesEmptyInformed =this.numberOfTimesEmptyInformed+ 1;
     }
 }
