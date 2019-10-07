@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ParkingLotTest$OwnerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-10-07T10:21:32" hostname="varsha" time="0.003">
+  <properties/>
+  <testcase name="givenNotifyOwnerWhenParkingLotFull_WhenPark_ThenShouldNotify()" classname="ParkingLotTest$OwnerTest" time="0.0"/>
+  <testcase name="givenParkingLotFulInformAfterFirstUnParkInform_WhenParkAndUnPark_ThenShouldCount()" classname="ParkingLotTest$OwnerTest" time="0.001"/>
+  <testcase name="givenNotifyOwnerWhenParkingLotEmpty_WhenUnPark_ThenShouldNotify()" classname="ParkingLotTest$OwnerTest" time="0.0"/>
+  <testcase name="givenNotifyOwnerWhenParkingLotFulCount_WhenParkAndUnPark_ThenShouldCount()" classname="ParkingLotTest$OwnerTest" time="0.0"/>
+  <testcase name="givenNotifyOwnerWhenParkingLotFulCount_WhenPark_ThenShouldCount()" classname="ParkingLotTest$OwnerTest" time="0.0"/>
+  <testcase name="givenOwnerToParkingLot_WhenNoPark_ThenShouldNotNotify()" classname="ParkingLotTest$OwnerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
