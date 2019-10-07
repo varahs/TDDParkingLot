@@ -1,3 +1,8 @@
+package parkinglot;
+
+import parkinglot.Iobserver;
+import parkinglot.Isubject;
+
 public class SecurityGuard implements Iobserver {
     private int numberOfTimesFullInformed;
     private int numberOfTimesEmptyInformed;

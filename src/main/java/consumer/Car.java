@@ -1,9 +1,11 @@
+package consumer;
+
 public class Car {
     private String type;
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "consumer.Car{" +
                 "type='" + type + '\'' +
                 '}';
     }

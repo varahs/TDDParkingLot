@@ -1,3 +1,6 @@
+package parkinglot;
+
+
 public class Owner implements Iobserver {
 
     private int numberOfTimesFullInformed;

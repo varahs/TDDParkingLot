@@ -1,7 +1,18 @@
+import attendent.Attendent;
+import attendent.MostCapacity;
+import attendent.MostSpace;
+import consumer.Car;
 import exception.DuplicateException;
 import exception.NotAvailableEception;
 import exception.ParkingFullException;
 import org.junit.jupiter.api.Test;
+import parkinglot.Isubject;
+import parkinglot.Owner;
+import parkinglot.ParkingLot;
+import parkinglot.SecurityGuard;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -320,6 +331,7 @@ class ParkingLotTest {
             assertEquals(0, guard.numberOfTimesFullInformed);
             assertEquals(0, owner.numberOfTimesFullInformed);
         }
+
         @Test
         void givenSubscribersThenUnsubscribe_WhenParkingLotFull_ThenNoNotify() throws DuplicateException, ParkingFullException, NotAvailableEception {
             MockSecurityGuard guard = new MockSecurityGuard();
@@ -348,6 +360,75 @@ class ParkingLotTest {
             assertEquals(2, guard.numberOfTimesFullInformed);
             assertEquals(1, guard.numberOfTimesEmptyInformed);
             assertEquals(1, owner.numberOfTimesFullInformed);
+        }
+    }
+
+    static class AttendentTest {
+        @Test
+        void givenVehicleToAttendent_whenParkInMostCapacity_ThenShouldParkInMostCapacity() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            List<ParkingLot> parkingLots = new ArrayList<>();
+            ParkingLot parkingLot1 = new ParkingLot(2);
+            ParkingLot parkingLot2 = new ParkingLot(5);
+            MostCapacity mostCapacity = new MostCapacity();
+            parkingLots.add(parkingLot1);
+            parkingLots.add(parkingLot2);
+            Attendent attendent = new Attendent(parkingLots, mostCapacity);
+            Object vehicle = new Object();
+            attendent.park(vehicle);
+            assertThrows(DuplicateException.class, () -> parkingLot2.park(vehicle));
+            assertThrows(NotAvailableEception.class, () -> parkingLot1.unPark(vehicle));
+            assertEquals(vehicle, parkingLot2.unPark(vehicle));
+
+        }
+
+        @Test
+        void givenVehicleToAttendent_WhenParkInMostCapacity_ThenShouldParkInMostCapacity() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            List<ParkingLot> parkingLots = new ArrayList<>();
+            ParkingLot parkingLot1 = new ParkingLot(3);
+            ParkingLot parkingLot2 = new ParkingLot(2);
+            MostCapacity mostCapacity = new MostCapacity();
+            parkingLots.add(parkingLot1);
+            parkingLots.add(parkingLot2);
+            Attendent attendent = new Attendent(parkingLots, mostCapacity);
+            Object vehicle = new Object();
+            attendent.park(vehicle);
+            assertThrows(DuplicateException.class, () -> parkingLot1.park(vehicle));
+            assertThrows(NotAvailableEception.class, () -> parkingLot2.unPark(vehicle));
+            assertEquals(vehicle, parkingLot1.unPark(vehicle));
+
+        }
+        @Test
+        void givenVehicleToAttendent_whenPark_ThenShouldParkInMostSpace() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            List<ParkingLot> parkingLots = new ArrayList<>();
+            ParkingLot parkingLot1 = new ParkingLot(2);
+            ParkingLot parkingLot2 = new ParkingLot(5);
+            MostSpace mostSpace = new MostSpace();
+            parkingLots.add(parkingLot1);
+            parkingLots.add(parkingLot2);
+            Attendent attendent = new Attendent(parkingLots, mostSpace);
+            Object vehicle = new Object();
+            attendent.park(vehicle);
+            assertThrows(DuplicateException.class, () -> parkingLot2.park(vehicle));
+            assertThrows(NotAvailableEception.class, () -> parkingLot1.unPark(vehicle));
+            assertEquals(vehicle, parkingLot2.unPark(vehicle));
+
+        }
+
+        @Test
+        void givenVehicleToAttendent_WhenParkAndUnpark_ThenShouldParkInMostSpace() throws DuplicateException, ParkingFullException, NotAvailableEception {
+            List<ParkingLot> parkingLots = new ArrayList<>();
+            ParkingLot parkingLot1 = new ParkingLot(3);
+            ParkingLot parkingLot2 = new ParkingLot(2);
+            MostSpace mostSpace = new MostSpace();
+            parkingLots.add(parkingLot1);
+            parkingLots.add(parkingLot2);
+            Attendent attendent = new Attendent(parkingLots, mostSpace);
+            Object vehicle = new Object();
+            attendent.park(vehicle);
+            assertThrows(DuplicateException.class, () -> parkingLot1.park(vehicle));
+            assertThrows(NotAvailableEception.class, () -> parkingLot2.unPark(vehicle));
+            assertEquals(vehicle, parkingLot1.unPark(vehicle));
+
         }
     }
 }

@@ -1,3 +1,5 @@
+package parkinglot;
+
 import exception.DuplicateException;
 import exception.NotAvailableEception;
 import exception.ParkingFullException;
@@ -10,6 +12,11 @@ import java.util.Map;
 public class ParkingLot implements Isubject {
 
     private Map<Object, Object> parkArea;
+
+    public int getCapacity() {
+        return capacity;
+    }
+
     private int capacity;
     private List<Iobserver> people;
     private boolean notifyFull;
@@ -29,28 +36,42 @@ public class ParkingLot implements Isubject {
     }
 
 
+    public int getParkAreaSize() {
+        return parkArea.size();
+    }
+
+    @Override
+    public String toString() {
+        return "ParkingLot{" +
+                "parkArea=" + parkArea +
+                ", capacity=" + capacity +
+                ", people=" + people +
+                ", notifyFull=" + notifyFull +
+                '}';
+    }
+
     public void park(Object obj) throws DuplicateException, ParkingFullException {
 
-            if (isParkingLotEmpty())
-                throw new ParkingFullException();
+        if (isParkingLotEmpty())
+            throw new ParkingFullException();
 
-            if (obj!=null&&!isDuplicate(obj))
-                throw new DuplicateException();
+        if (obj != null && !isDuplicate(obj))
+            throw new DuplicateException();
 
-            this.parkArea.put(obj, obj);
+        this.parkArea.put(obj, obj);
 
-            if (isParkingLotEmpty() && this.people != null) {
-                notifyFull = true;
+        if (isParkingLotEmpty() && this.people != null) {
+            notifyFull = true;
 
-                notifySubscribers();
-            }
+            notifySubscribers();
+        }
 
 
     }
 
 
     public Object unPark(Object object1) throws NotAvailableEception {
-        if (object1!=null&&isDuplicate(object1))
+        if (object1 != null && isDuplicate(object1))
             throw new NotAvailableEception();
         if (parkArea.size() == capacity) {
 

@@ -1,6 +1,9 @@
+package consumer;
+
 import exception.DuplicateException;
 import exception.NotAvailableEception;
 import exception.ParkingFullException;
+import parkinglot.ParkingLot;
 
 
 public class Consumer {
@@ -16,18 +19,18 @@ public class Consumer {
     private void parking(Car car) {
         try {
             this.personalParkingLot.park(car);
-            System.out.println("Parking Car " + car.toString() + " added to Personal parkinglot");
+            System.out.println("Parking consumer.Car " + car.toString() + " added to Personal parkinglot");
         } catch (DuplicateException e) {
-            System.out.println("Parking Car " + car.toString() + " is a duplicate in Personal parkinglot");
+            System.out.println("Parking consumer.Car " + car.toString() + " is a duplicate in Personal parkinglot");
         } catch (ParkingFullException e) {
-            System.out.println("Parking Car " + car.toString() + " can't be added to Personal parkinglot");
+            System.out.println("Parking consumer.Car " + car.toString() + " can't be added to Personal parkinglot");
             try {
                 this.guestParkingLot.park(car);
-                System.out.println("Parking Car " + car.toString() + " added to Guest parkinglot");
+                System.out.println("Parking consumer.Car " + car.toString() + " added to Guest parkinglot");
             } catch (DuplicateException ex) {
-                System.out.println("Parking Car " + car.toString() + " is a duplicate in Guest parkinglot");
+                System.out.println("Parking consumer.Car " + car.toString() + " is a duplicate in Guest parkinglot");
             } catch (ParkingFullException ex) {
-                System.out.println("Parking Car " + car.toString() + " can't be added to Guest parkinglot");
+                System.out.println("Parking consumer.Car " + car.toString() + " can't be added to Guest parkinglot");
             }
         }
     }
@@ -37,9 +40,9 @@ public class Consumer {
 
         try {
             this.personalParkingLot.unPark(car);
-            System.out.println("Unparking Car " + car.toString() + " in Personal Parkinglot");
+            System.out.println("Unparking consumer.Car " + car.toString() + " in Personal Parkinglot");
         } catch (NotAvailableEception notAvailableEception) {
-            System.out.println("Unparking Car " + car.toString() + " not available in Personal Parkinglot");
+            System.out.println("Unparking consumer.Car " + car.toString() + " not available in Personal Parkinglot");
             try {
                 this.guestParkingLot.unPark(car);
                 System.out.println("Unparking car " + car.toString() + " in guest parkinglot");

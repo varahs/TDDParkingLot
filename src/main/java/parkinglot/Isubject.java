@@ -1,3 +1,5 @@
+package parkinglot;
+
 
 public interface Isubject {
 
